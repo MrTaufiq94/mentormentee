@@ -9,4 +9,5 @@ class StudentSemester extends Model
 {
     use HasFactory;
     protected $table = 'KRS_ThnSemPL';
+    
 }

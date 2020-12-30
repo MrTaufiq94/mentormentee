@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/lokasi', [App\Http\Controllers\LokasiController::class, 'index']);
+// Route::get('/trainings', [\App\Http\Controllers\TrainingController::class, 'index'])->name('training:list');
