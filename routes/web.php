@@ -17,5 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/lokasi', [App\Http\Controllers\LokasiController::class, 'index']);
-// Route::get('/trainings', [\App\Http\Controllers\TrainingController::class, 'index'])->name('training:list');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/location', [App\Http\Controllers\LocationController::class, 'index'])->name('location:list');
+// Route::get('/lokasi/create',[App\Http\Controllers\LokasiController::class, 'create'])->name('lokasi:create');
+// Route::post('/lokasi/create',[App\Http\Controllers\LokasiController::class, 'store'])->name('lokasi:store');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
