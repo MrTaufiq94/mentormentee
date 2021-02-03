@@ -26,7 +26,7 @@
                  
  
                  <tbody>
-                   @foreach($mentor as $mentor)
+                   @foreach($mentors as $mentor)
                    <tr>
                    <td>{{ $mentor->NoStaf}}</td>
                    <td>{{ $mentor->Keaktifan}}</td>
@@ -39,7 +39,8 @@
                     @endforeach
                 </tbody>
                 </table>
-               
+                {{$mentors->links()}}
+
                 </div>
             </div>
         </div>

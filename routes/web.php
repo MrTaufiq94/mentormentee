@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/location', [App\Http\Controllers\LocationController::class, 'index'])->name('location:list');
-Route::get('/mentor', [App\Http\Controllers\MentorController::class, 'index'])->name('mentor:list');
+Route::get('/mentors', [App\Http\Controllers\MentorController::class, 'index'])->name('mentor:list');
 // Route::get('/lokasi/create',[App\Http\Controllers\LokasiController::class, 'create'])->name('lokasi:create');
 // Route::post('/lokasi/create',[App\Http\Controllers\LokasiController::class, 'store'])->name('lokasi:store');
 

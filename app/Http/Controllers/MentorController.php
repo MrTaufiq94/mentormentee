@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Mentor;
+use File;
+use Storage;
 
 class MentorController extends Controller
 {
@@ -11,10 +13,11 @@ class MentorController extends Controller
     {
         
 
-            $mentor=Mentor::all();
-            //$lokasi=Lokasi::paginate(3); //by default 15
+            // $mentor=Mentor::all();
+            // $mentor=Mentor::paginate(5); //by default 15
+            $mentors = \App\Models\Mentor::paginate();
            // dd($trainings);  //cara debug dump & die
-           return view('mentors.index', compact('mentor'));
+           return view('mentors.index', compact('mentors'));
            //recources/views/cars/index.blade.php
     
         
