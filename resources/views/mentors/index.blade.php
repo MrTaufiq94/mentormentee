@@ -17,6 +17,7 @@
                 <thead>
                  <tr>
                  <th> No Staff </th>
+                 <th> Nama </th>
                  <th> Keaktifan</th>
                  <th> Kuota </th>
                 
@@ -29,6 +30,9 @@
                    @foreach($mentors as $mentor)
                    <tr>
                    <td>{{ $mentor->NoStaf}}</td>
+                   <td>
+                    {{ $mentor->NoStaf->Nama}}
+                    </td>
                    <td>{{ $mentor->Keaktifan}}</td>
                    <td>{{ $mentor->Kuota}}</td>
                    

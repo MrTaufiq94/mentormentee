@@ -12,4 +12,9 @@ class Mentor extends Model
     public $timestamps = false;
     protected $table = 'RKD_Mentor';
     protected $fillable =['NoStaf','Keaktifan','Kuota'];
+
+    public function stafs()
+    {
+        return $this->belongsTo('App\Models\Staf');
+    }
 }
