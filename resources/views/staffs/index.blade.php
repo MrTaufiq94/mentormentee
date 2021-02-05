@@ -26,20 +26,19 @@
                  
  
                  <tbody>
-                   @foreach($stafs as $staf)
+                   @foreach($staffs as $staff)
                    <tr>
-                   <td>{{ $staf->NoStaf}}</td>
-                   <td>{{ $staf->Nama}}</td>
-                   <td>{{ $staf->Jawatan}}</td>
+                   <td>{{ $staff->NoStaf}}</td>
+                   <td>{{ $staff->Nama}}</td>
+                   <td>{{ $staff->Jawatan}}</td>
                    
 
-                  
-                 
+            
                 </tr>
                     @endforeach
                 </tbody>
                 </table>
-                {{$stafs->links()}}
+                {{$staffs->links()}}
 
                 </div>
             </div>

@@ -31,7 +31,8 @@
                    <tr>
                    <td>{{ $mentor->NoStaf}}</td>
                    <td>
-                    {{ $mentor->NoStaf->Nama}}
+                    {{ $mentor->staff['Nama']}} 
+                    <!-- calling Name from relationship Staff Mentor -->
                     </td>
                    <td>{{ $mentor->Keaktifan}}</td>
                    <td>{{ $mentor->Kuota}}</td>

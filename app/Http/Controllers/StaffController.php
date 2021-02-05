@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Staf;
+use App\Models\Staff;
+use File;
+use Storage;
 
 class StaffController extends Controller
 {
@@ -13,9 +15,9 @@ class StaffController extends Controller
 
             // $mentor=Mentor::all();
             // $mentor=Mentor::paginate(5); //by default 15
-            $stafs = \App\Models\Staf::paginate();
+            $staffs = \App\Models\Staff::paginate();
            // dd($trainings);  //cara debug dump & die
-           return view('stafs.index', compact('stafs'));
+           return view('staffs.index', compact('staffs'));
            //recources/views/cars/index.blade.php
     
         

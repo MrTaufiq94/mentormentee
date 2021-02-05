@@ -12,9 +12,12 @@ class Mentor extends Model
     public $timestamps = false;
     protected $table = 'RKD_Mentor';
     protected $fillable =['NoStaf','Keaktifan','Kuota'];
+    protected $primaryKey = 'NoStaf';
+    public $incrementing = false;
 
-    public function stafs()
+    public function staff()
     {
-        return $this->belongsTo('App\Models\Staf');
+        return $this->hasOne('App\Models\Staff', 'NoStaf');
+        // note: we can also inlcude Mobile model like: 'App\Mobile'
     }
 }

@@ -19,8 +19,8 @@ Route::get('/', function () {
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/location', [App\Http\Controllers\LocationController::class, 'index'])->name('location:list');
-Route::get('/mentors', [App\Http\Controllers\MentorController::class, 'index'])->name('mentor:list');
-Route::get('/staff', [App\Http\Controllers\StafController::class, 'index'])->name('staff:list');
+Route::get('/mentor', [App\Http\Controllers\MentorController::class, 'index'])->name('mentor:list');
+Route::get('/staff', [App\Http\Controllers\StaffController::class, 'index'])->name('staff:list');
 // Route::get('/lokasi/create',[App\Http\Controllers\LokasiController::class, 'create'])->name('lokasi:create');
 // Route::post('/lokasi/create',[App\Http\Controllers\LokasiController::class, 'store'])->name('lokasi:store');
 
