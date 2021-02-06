@@ -9,10 +9,19 @@ class Student extends Model
 {
     use HasFactory;
     protected $table = 'RKD01_Peribadi';
+    protected $fillable =['RKD01_ID', 'RKD01_Nama', 'RKD01_Nomatrik', 'RKD01_Caw', 'RKD01_Program', 'RKD01_Jantina', 'RKD01_TelBimbit', 'RKD01_EmailKptm', 'StatusPL_Kod', 'RKD01_Status'];        
     protected $primaryKey = 'RKD01_Nomatrik';
-
-    public function semester()
+    public $incrementing = false;
+    
+    // public function semester()
+    // {
+    //     return $this->hasMany(StudentSemester::class, 'RKD01_Nomatrik','RKD01_Nomatrik');
+    // }
+    // relationship with table mentor - 1 mentor belongs to many mentee
+    public function mentor()
     {
-        return $this->hasMany(StudentSemester::class, 'RKD01_Nomatrik','RKD01_Nomatrik');
+        return $this->belongsTo('App\Models\Mentor', 'NoStaf');
+        // note: we can also inlcude Mobile model like: 'App\Mobile'
     }
+
 }
