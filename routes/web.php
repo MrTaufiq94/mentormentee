@@ -22,6 +22,7 @@ Route::get('/location', [App\Http\Controllers\LocationController::class, 'index'
 Route::get('/mentor', [App\Http\Controllers\MentorController::class, 'index'])->name('mentor:list');
 Route::get('/staff', [App\Http\Controllers\StaffController::class, 'index'])->name('staff:list');
 Route::get('/mentee', [App\Http\Controllers\StudentController::class, 'index'])->name('student:list');
+Route::get('/mentormentee/{NoStaf}', [App\Http\Controllers\MentorController::class, 'show'])->name('mentor:show');
 // Route::get('/lokasi/create',[App\Http\Controllers\LokasiController::class, 'create'])->name('lokasi:create');
 // Route::post('/lokasi/create',[App\Http\Controllers\LokasiController::class, 'store'])->name('lokasi:store');
 

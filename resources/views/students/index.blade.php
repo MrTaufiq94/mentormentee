@@ -29,17 +29,21 @@
  
                  <tbody>
                    @foreach($students as $student)
+                   
+                   
                    <tr>
-                   <td>{{ $student->RKD01_ID}}</td>
+                   
+                   <td>{{ $student->RKD01_Nomatrik}}</td>
                    <td>{{ $student->RKD01_Nama}}</td>
                    <td>{{ $student->RKD01_Program}}</td>
                    <td>{{ $student->RKD01_Caw}}</td>
-
+                    
                    
 
                   
                  
                 </tr>
+               
                     @endforeach
                 </tbody>
                 </table>

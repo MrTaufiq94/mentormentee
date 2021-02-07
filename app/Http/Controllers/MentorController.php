@@ -22,4 +22,16 @@ class MentorController extends Controller
     
         
     }
+
+    public function show(Mentor $mentor)
+    {
+        // $this->authorize('view', $mentor);
+        // find id on table using model
+        //$training = Training::find($id);
+        // this function is using Binding Model
+
+        // return to view
+        $mentor = Mentor::find($NoStaf);
+        return view('mentors.mentormentee', compact('mentor'));
+    }
 }
