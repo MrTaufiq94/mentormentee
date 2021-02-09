@@ -17,14 +17,16 @@ class Mentor extends Model
 
     public function staff()
     {
-        return $this->hasOne('App\Models\Staff', 'NoStaf');
+        return $this->belongsTo('App\Models\Staff', 'NoStaf');
         // note: we can also inlcude Mobile model like: 'App\Mobile'
     }
 // relation with table mentee
     public function student()
     {
         
-        return $this->hasMany('App\Models\Student','RKD01_Nomatrik');
+        return $this->hasMany('App\Models\Student');
         // note: we can also inlcude Mobile model like: 'App\Mobile'
     }
+
+
 }

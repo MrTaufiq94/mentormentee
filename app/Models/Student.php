@@ -13,6 +13,7 @@ class Student extends Model
     protected $primaryKey = 'RKD01_Nomatrik';
     public $incrementing = false;
     
+    
     // public function semester()
     // {
     //     return $this->hasMany(StudentSemester::class, 'RKD01_Nomatrik','RKD01_Nomatrik');
@@ -20,7 +21,7 @@ class Student extends Model
     // relationship with table mentor - 1 mentor belongs to many mentee
     public function mentor()
     {
-        return $this->belongsTo('App\Models\Mentor', 'NoStaf');
+        return $this->belongsTo('App\Models\Mentor');
         // note: we can also inlcude Mobile model like: 'App\Mobile'
     }
 
