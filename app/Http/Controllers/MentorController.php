@@ -34,10 +34,11 @@ class MentorController extends Controller
         // this function is using Binding Model
 
         // return to view
-        $mentors = Mentor::find('01459');
+        // $mentors = Mentor::find('00527');
         // dd($student);
         // $mentor = DB::table('RKD_Mentor')->find('00527');
-        return view('test.index', compact('mentors'));
+        // return view('test.index', compact('mentors'));
+        return "One to many";
         
     }
 }

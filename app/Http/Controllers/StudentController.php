@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use App\Models\Student;
+use App\Models\Mentor;
 use File;
 use Storage;
 
@@ -26,6 +27,21 @@ class StudentController extends Controller
            return view('students.index', compact('students'));
            //recources/views/cars/index.blade.php
     
+        
+    }
+
+    public function show()
+    {
+        // $this->authorize('view', $mentor);
+        // find id on table using model
+        //$training = Training::find($id);
+        // this function is using Binding Model
+
+        // return to view
+        $mentors = Mentor::find('00527');
+        // dd($student);
+        // $mentor = DB::table('RKD_Mentor')->find('00527');
+        return view('test.index', compact('mentors'));
         
     }
 }
