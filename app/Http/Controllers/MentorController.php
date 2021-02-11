@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use App\Models\Mentor;
+use App\Models\MentorPL;
 use File;
 use Storage;
 
@@ -38,7 +39,7 @@ class MentorController extends Controller
         // dd($student);
         // $mentor = DB::table('RKD_Mentor')->find('00527');
         // return view('test.index', compact('mentors'));
-        return "One to many";
+        return Mentor::find('01459')->getStudent;
         
     }
 }
