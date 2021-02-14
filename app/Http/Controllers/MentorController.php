@@ -27,7 +27,7 @@ class MentorController extends Controller
         
     }
 
-    public function show()
+    public function show($nostaff)
     {
         // $this->authorize('view', $mentor);
         // find id on table using model
@@ -39,7 +39,9 @@ class MentorController extends Controller
         // dd($student);
         // $mentor = DB::table('RKD_Mentor')->find('00527');
         // return view('test.index', compact('mentors'));
-        return Mentor::find('01459')->getStudent;
+        return Mentor::find($nostaff)->getStudent;
+        // $mentors = Mentor::find('NoStaf')->getStudent;
+        // return view('test.index', compact('mentors'));
         
     }
 }

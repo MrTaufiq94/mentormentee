@@ -1,8 +1,8 @@
+<!-- 
+            {{$mentors->staff->Nama}}
 
-            <!-- {{dd( $mentors->staff['Nama'])}} -->
+            @foreach($mentorPLs as $mentorPL) -->
+            <!-- {{ dd($mentorPL->mentorPL['RKD01_Nomatrik'])}}
 
-            <!-- @foreach($mentors as $mentor) -->
-            <!-- {{ dd($mentors->students['RKD01_Nomatrik'])}} -->
-
-            <!-- @endforeach -->
+            @endforeach --> 
 
