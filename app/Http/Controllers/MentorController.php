@@ -35,13 +35,16 @@ class MentorController extends Controller
         // this function is using Binding Model
 
         // return to view
-        // $mentors = Mentor::find('00527');
-        // dd($student);
+
+  
         // $mentor = DB::table('RKD_Mentor')->find('00527');
         // return view('test.index', compact('mentors'));
-        return Mentor::find($nostaff)->getStudent;
-        // $mentors = Mentor::find('NoStaf')->getStudent;
-        // return view('test.index', compact('mentors'));
+        $mentor = Mentor::find($nostaff);
+        return view('test.index')->with('mentor', $mentor);
+
+        // return Mentor::find($nostaff)->getStudent; yg asal
+        
+
         
     }
 }

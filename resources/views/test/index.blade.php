@@ -1,8 +1,7 @@
-<!-- 
-            {{$mentors->staff->Nama}}
+{{$mentor->staff->Nama}}
 
-            @foreach($mentorPLs as $mentorPL) -->
-            <!-- {{ dd($mentorPL->mentorPL['RKD01_Nomatrik'])}}
-
-            @endforeach --> 
-
+@forelse ($mentor->getStudent as $mentee)
+{{$mentee['RKD01_Nomatrik']}}
+@empty
+No mentee
+@endforelse
