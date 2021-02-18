@@ -31,17 +31,36 @@
             </div>
 
             <div class="card">
-                @foreach ($mentor->getStudent as $mentor)
-                    {{$mentor[0]->RKD01_Nama}}
-                    {{-- @foreach ($mentor->student as $student)
-                    <tr>
-                        <td>{{ $student}}</td> --}}
-                        {{-- <td>{{ $m['RKD01_Nama']}}</td>
-                        <td>{{ $m['RKD01_Program']}}</td>
-                        <td>{{ $m['RKD01_Caw']}}</td>  --}}
-                    {{-- </tr>
-                    @endforeach --}}
-                @endforeach
+                <div class="card-header">{{ __('List of ') }} {{ $mentor->staff->Nama}} Mentees</div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th> No Matrik </th>
+                                    <th> Nama </th>
+                                    <th> Program</th>
+                                    <th> Cawangan </th> 
+                                </tr>
+                            </thead>
+                            <tbody>
+                            @foreach ($mentor->getStudent as $value)
+                                @foreach ($value ->students as $stud)
+                                <tr>
+                                    <td>{{ $stud ->RKD01_Nomatrik }}</td> 
+                                    <td>{{ $stud ->RKD01_Nama}}</td>
+                                    <td>{{ $stud ->RKD01_Program }}</td>
+                                    <td>{{ $stud ->RKD01_Caw }}</td> 
+                                </tr>
+                                @endforeach
+                            @endforeach
+                            </tbody>
+                        </table>
+                        {{-- <div style="text-align: center">
+                            {{ $mentor->links("vendor.pagination.bootstrap-4") }}
+                        </div> --}}
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>

@@ -31,7 +31,7 @@ class Student extends Model
     //     // note: we can also inlcude Mobile model like: 'App\Mobile'
     // }
 
-    public function mentor1()
+    public function mentorPL()
     {
         return $this->belongsTo(MentorPL::class, 'RKD01_Nomatrik','RKD01_Nomatrik');
         // note: we can also inlcude Mobile model like: 'App\Mobile'

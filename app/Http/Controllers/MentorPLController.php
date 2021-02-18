@@ -27,7 +27,9 @@ class MentorPLController extends Controller
         // dd($student);
         
         //$mentee = MentorPL::where('NoStaf','01459')->first();
-        dd($mentor->student);
+        //dd($mentor->students);
+        // $mentee = $mentor->getStudent;
+        // [0]->students;
         // $mentor = \App\Models\Mentor::paginate();
         return view('mentors.mentormentee', compact(['mentor']));
 

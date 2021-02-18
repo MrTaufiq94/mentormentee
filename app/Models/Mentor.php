@@ -29,7 +29,7 @@ class Mentor extends Model
 
     public function student()
     {
-        return $this->hasOneThrough('App\Models\Student', 'App\Models\MentorPL','RKD01_Nomatrik','');
+        return $this->hasManyThrough('App\Models\Student', 'App\Models\MentorPL','RKD01_Nomatrik','RKD01_Nomatrik');
         // note: we can also inlcude Mobile model like: 'App\Mobile'
     }
 
