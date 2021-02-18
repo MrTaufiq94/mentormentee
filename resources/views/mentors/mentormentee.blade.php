@@ -11,25 +11,71 @@
 
         
         <div class="container">    
-                <div class="jumbotron">
+                
                   <div class="row">
-                      <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
-                          <img src="https://www.svgimages.com/svg-image/s5/man-passportsize-silhouette-icon-256x256.png" alt="stack photo" class="img">
+                      <div class="col-md-2 col-xs-12 col-sm-5 col-lg-3">
+                          <img src="https://icon-library.net/images/profile-image-icon/profile-image-icon-5.jpg" alt="stack photo" class="img">
                       </div>
-                      <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8">
+                      <div class="col-md-4 col-xs-12 col-sm-5 col-lg-8">
                           <div class="container" style="border-bottom:1px solid black">
-                            <h2>{{ $mentor->NoStaf}} </h2>
+                            <h2>{{ $mentor->staff->Nama}} </h2>
                           </div>
                             <hr>
-                          <ul class="container details">
-                            <li><p><span class="glyphicon glyphicon-earphone one" style="width:50px;"></span>+91 90000 00000</p></li>
-                            <li><p><span class="glyphicon glyphicon-envelope one" style="width:50px;"></span>somerandom@email.com</p></li>
-                            <li><p><span class="glyphicon glyphicon-map-marker one" style="width:50px;"></span>Hyderabad</p></li>
-                            <li><p><span class="glyphicon glyphicon-new-window one" style="width:50px;"></span><a href="#">www.example.com</p></a>
-                          </ul>
+
+                            {{$mentor->staff->NoStaf}}</br>
+                            {{$mentor->staff->Jawatan}}
+                            <p>{{$mentor->staff->CawKod}}</p>
+
+
                       </div>
                   </div>
+
+<div class="card">
+                <div class="card-header">{{ __('List of ') }} {{ $mentor->staff->Nama}} Mentees</div>
+
+                <div class="card-body">
+
+                <table class="table">
+                <thead>
+                 <tr>
+                 <th> No Matrik </th>
+                 <!-- <th> Nama </th>
+                 <th> Program</th>
+                 <th> Cawangan </th> -->
+ 
+                
+                 
+                 </tr>
+                 </thead>
+                 
+ 
+                 <tbody>
+                 @foreach ($mentor as $mentee)
+                   
+                   
+                   <tr>
+                   
+                   <td>{{ $mentee['RKD01_Nomatrik']}}</td>
+                   <!-- <td>{{ $mentee['RKD01_Nama']}}</td>
+                   <td>{{ $mentee['RKD01_Program']}}</td>
+                   <td>{{ $mentee['RKD01_Caw']}}</td> -->
+                    
+                   
+
+                  
+                 
+                </tr>
+               
+                
+                  
+                @endforeach
+                </tbody>
+                </table>
+                <!-- paginate here -->
+                
+
                 </div>
+            </div>
 
         </div>
     </div>
