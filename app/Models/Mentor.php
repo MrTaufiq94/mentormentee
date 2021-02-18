@@ -23,8 +23,13 @@ class Mentor extends Model
 // relation with table mentee
     public function getStudent()
     {
-        
         return $this->hasMany('App\Models\MentorPL', 'NoStaf');
+        // note: we can also inlcude Mobile model like: 'App\Mobile'
+    }
+
+    public function student()
+    {
+        return $this->hasOneThrough('App\Models\Student', 'App\Models\MentorPL','RKD01_Nomatrik','');
         // note: we can also inlcude Mobile model like: 'App\Mobile'
     }
 

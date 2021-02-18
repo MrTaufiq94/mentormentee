@@ -15,7 +15,19 @@ class MentorPL extends Model
 
     public function mentor()
     {
-        return $this->belongsTo('App\Models\Staff', 'NoStaf');
+        return $this->belongsTo('App\Models\Mentor', 'NoStaf','NoStaf');
+        // note: we can also inlcude Mobile model like: 'App\Mobile'
+    }
+
+    // public function student()
+    // {
+    //     return $this->belongsTo(Student::class, 'RKD01_Nomatrik', 'RKD01_Nomatrik');
+    //     // note: we can also inlcude Mobile model like: 'App\Mobile'
+    // }
+
+    public function student()
+    {
+        return $this->hasMany(Student::class, 'RKD01_Nomatrik', 'RKD01_Nomatrik');
         // note: we can also inlcude Mobile model like: 'App\Mobile'
     }
 
